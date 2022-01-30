@@ -131,7 +131,6 @@ input[type="text"] {
   .cards {
     grid-template-columns: 1fr;
   }
-
   .cards img {
     width: 100%;
     height: 300px;
