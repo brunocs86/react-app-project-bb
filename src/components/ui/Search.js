@@ -1,8 +1,13 @@
+import { getSuggestedQuery } from "@testing-library/react";
 import React, { useState } from "react";
 import { forwardRef } from "react/cjs/react.development";
 
-const Search = () => {
+const Search = ({ getQuery }) => {
   const [text, setText] = useState("");
+  const onChange = (q) => {
+    setText(q);
+    getQuery(q);
+  };
 
   return (
     <section className="search">
@@ -12,7 +17,7 @@ const Search = () => {
           className="form-control"
           placeholder="Search characters"
           value={text}
-          onChange={(e) => setText(e.target.value)}
+          onChange={(e) => onChange(e.target.value)}
           autoFocus
         />
       </form>
