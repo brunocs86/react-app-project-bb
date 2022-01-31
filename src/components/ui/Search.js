@@ -1,6 +1,4 @@
-import { getSuggestedQuery } from "@testing-library/react";
 import React, { useState } from "react";
-import { forwardRef } from "react/cjs/react.development";
 
 const Search = ({ getQuery }) => {
   const [text, setText] = useState("");
